@@ -1,7 +1,7 @@
 ﻿using System;
 namespace HuronInstaller
 {
-    class Program
+    class Huron_main
     {
         static void Main(string[] args)
         {
