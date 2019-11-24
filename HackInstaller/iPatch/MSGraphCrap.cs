@@ -6,7 +6,7 @@ namespace iPatch
 {
     class MSGraphCrap
     {
-        private string get_kext_repo_id()
+        public string get_kext_repo_id()
         {
             string base64Value = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes("https://onedrive.live.com/redir?resid=1231244193912!12&authKey=1201919!12921!1"));
             string encodedUrl = "u!" + base64Value.TrimEnd('=').Replace('/', '_').Replace('+', '-');
