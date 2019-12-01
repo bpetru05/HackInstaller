@@ -6,7 +6,7 @@ namespace iPatch
 {
     class MSGraphCrap
     {
-        public string get_kext_repo_id()
+        public string GetKextRepoID()
         {
             string encodedUrl = "https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw";
             encodedUrl = "s" + encodedUrl.TrimStart("https://1drv.ms/f/".ToCharArray());
@@ -40,7 +40,6 @@ namespace iPatch
         }
         public GraphServiceClient GetKextRepo(bool is_debug)
         {
-            string KextRepoID = get_kext_repo_id();
             GraphServiceClient graphServiceClient = Graph_Authenticate(is_debug);
             if (graphServiceClient == null)
             {
