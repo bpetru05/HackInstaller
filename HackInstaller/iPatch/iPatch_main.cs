@@ -8,11 +8,11 @@ namespace iPatch
         public static async void Main(string[] args)
         {
             Utilities utilities = new Utilities();/// some stuff
-            MSGraphCrap Graph = new MSGraphCrap();
-            var KextRepo = Graph.GetKextRepo(utilities.DoesStringContain(args,"debug"));
-            string ID = Graph.GetKextRepoID();
-            IDriveItemChildrenCollectionPage MainFolder = await KextRepo.Shares[ID].DriveItem.Children.Request().GetAsync();
-            foreach(var folder in MainFolder)
+            MSGraphCrap Graph = new MSGraphCrap();///Local graph methods
+            var KextRepo = Graph.GetKextRepo(utilities.DoesStringContain(args,"debug"));///Get the repo and activate error reporting if debug
+            string ID = Graph.GetKextRepoID();//Get the sharing ID
+            IDriveItemChildrenCollectionPage MainFolder = await KextRepo.Shares[ID].DriveItem.Children.Request().GetAsync();//get all the folders
+            foreach(var folder in MainFolder)//for each folder
             {
                 ;
             }
