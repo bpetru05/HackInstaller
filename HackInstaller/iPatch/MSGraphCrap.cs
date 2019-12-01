@@ -8,8 +8,8 @@ namespace iPatch
     {
         public string get_kext_repo_id()
         {
-            string base64Value = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes("https://onedrive.live.com/redir?resid=1231244193912!12&authKey=1201919!12921!1"));
-            string encodedUrl = "u!" + base64Value.TrimEnd('=').Replace('/', '_').Replace('+', '-');
+            string encodedUrl = "https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw";
+            encodedUrl = encodedUrl.TrimStart("https://1drv.ms/f/");
             return encodedUrl;
         }
         private GraphServiceClient Graph_Authenticate(bool is_debug)
