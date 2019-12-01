@@ -9,7 +9,7 @@ namespace iPatch
         public string get_kext_repo_id()
         {
             string encodedUrl = "https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw";
-            encodedUrl = encodedUrl.TrimStart("https://1drv.ms/f/");
+            encodedUrl = "s" + encodedUrl.TrimStart("https://1drv.ms/f/".ToCharArray());
             return encodedUrl;
         }
         private GraphServiceClient Graph_Authenticate(bool is_debug)
