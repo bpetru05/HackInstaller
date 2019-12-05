@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Management;
+using iPatch;
 namespace HuronInstaller
 {
     class Huron_main
@@ -13,12 +14,12 @@ namespace HuronInstaller
             foreach(var option in toScan)
             {
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("select * from " + option);//get devices
-               
             }
         }
         static void Main(string[] args)
         {
             
+
         }
     }
 }

@@ -6,9 +6,11 @@ namespace iPatch
 {
     class MSGraphCrap
     {
+        private const string Link = "https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw";
+
         public string GetKextRepoID()
         {
-            string encodedUrl = "https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw";
+            string encodedUrl = Link;
             encodedUrl = "s" + encodedUrl.TrimStart("https://1drv.ms/f/".ToCharArray());//get the sharing ID
             return encodedUrl;
         }
@@ -46,7 +48,7 @@ namespace iPatch
             {
                 throw new System.AccessViolationException("Cannot access the KextRepo. Contact the software writer");//OOOF
             }
-            return graphServiceClient;
+            return graphServiceClient;//retunn the bad boy
         }
     }
 }
