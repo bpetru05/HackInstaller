@@ -4,7 +4,7 @@ using System.IO;
 using Microsoft.Graph;
 namespace iPatch
 {
-    class IPatch_main
+    public static class IPatch_main
     {
         public static GraphServiceClient KextRepo;
         public static string ID;
@@ -38,12 +38,14 @@ namespace iPatch
         }
         public static async void IPS_Initialise(string[] args)
         {
-            Utilities utilities = new Utilities();/// some stuff
-            MSGraphCrap Graph = new MSGraphCrap();///Local graph methods
-            KextRepo = Graph.GetKextRepo(utilities.DoesStringContain(args,"debug"));///Get the repo and activate error reporting if debug
-            ID = Graph.GetKextRepoID();//Get the sharing ID
+            KextRepo = OneDriveHandler.GetKextRepo(Utilities.DoesStringContain(args,"debug"));///Get the repo and activate error reporting if debug
+            ID = OneDriveHandler.GetKextRepoID();//Get the sharing ID
             MainFolder = await KextRepo.Shares[ID].DriveItem.Children.Request().GetAsync();//get all the folders
             //var MainFolder = KextRepo
+        }
+        public static void Main()
+        {
+            IPS_Initialise(new string[1] { "" });
         }
     }
 }

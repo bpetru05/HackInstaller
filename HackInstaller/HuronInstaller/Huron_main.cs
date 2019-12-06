@@ -16,10 +16,9 @@ namespace HuronInstaller
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("select * from " + option);//get devices
             }
         }
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            
-
+            IPatch_main.IPS_Initialise(args);//God have mercy this works
         }
     }
 }

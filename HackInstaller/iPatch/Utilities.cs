@@ -6,7 +6,7 @@ namespace iPatch
 {
     class Utilities
     {
-        public bool DoesStringContain(string[] input, string check)
+        public static bool DoesStringContain(string[] input, string check)
         {
             foreach (var i in input)
             {
