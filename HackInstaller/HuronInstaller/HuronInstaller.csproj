@@ -13,8 +13,4 @@
     <PackageReference Include="System.Management" Version="4.7.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\iPatch\iPatch.csproj" />
-  </ItemGroup>
-
 </Project>
